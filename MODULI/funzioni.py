@@ -84,7 +84,7 @@ def marca_temporale():
 
     print(anno_mese_giorno)
 
-    with open("ultimo aggiornamento.txt", "w") as file:
+    with open(ultimo_agg_url, "w") as file:
         file.write(anno_mese_giorno)
     return(anno_mese_giorno)
 
