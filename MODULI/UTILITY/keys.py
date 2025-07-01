@@ -1,3 +1,5 @@
+from pathlib import Path
+
 
 mapping_dict = {
     "Ares_archivio_delibere": "Ares",
@@ -61,7 +63,7 @@ url_comm_dict = {
     "Asl_8_determine": "https://www.asl8cagliari.it/albo-pretorio/determine-dirigenziali/",
 }
 
-atti_excel_url = r"MODULI\DB\ATTI_ASL_DAL_2022.xlsx"
-atti_parquet_url = r"MODULI\DB\ATTI_ASL_DAL_2022.parquet"
-ultimo_agg_url = r"MODULI\DB\ultimo aggiornamento.txt"
-atti_pubb_url =r"MODULI\DB\atti_in_public.xlsx"
+atti_excel_url = Path("MODULI") / "DB" / "ATTI_ASL_DAL_2022.xlsx"
+atti_parquet_url = Path("MODULI") / "DB" / "ATTI_ASL_DAL_2022.parquet"
+ultimo_agg_url = Path("MODULI") / "DB" / "ultimo aggiornamento.txt"
+atti_pubb_url = Path("MODULI") / "DB" / "atti_in_public.xlsx"
