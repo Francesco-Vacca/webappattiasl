@@ -69,6 +69,12 @@ def unisci_file(new_df):
     df = pl.concat([new_df,old_df])
     df = df.unique(subset=["Azienda", "Tipo", "Numero", "Data"])
     df = df.sort(["Tipo","Azienda", "Data","Numero"], descending=[False, False, True, True])
+    if "Descrizione" in df.columns:
+        df = df.with_columns(
+            pl.col("Descrizione")
+            .str.replace("_x005F_", "_", literal=True)
+            .str.replace("_x000D_", "\n", literal=True)
+        )
     data = marca_temporale()
     df.write_excel(atti_excel_url,worksheet=f"{data}")
     df.write_parquet(atti_parquet_url)
