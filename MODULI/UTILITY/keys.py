@@ -1,5 +1,6 @@
 from pathlib import Path
 
+
 mapping_dict = {
     "Ares_archivio_delibere": "Ares",
     "Ares_archivio_determine": "Ares",
