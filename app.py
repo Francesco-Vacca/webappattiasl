@@ -63,7 +63,7 @@ if st.session_state.show_filters:
             st.dataframe(risultati, use_container_width=True)
 
 # --- Aggiornamento dati ---
-if st.button("🔄 AGGIORNA"):
+if st.button("🔄 AGGIORNA",help="Non cliccare"):
     with st.spinner("⏳ Aggiornamento in corso..."):
         scrap_asl()
     st.success("✅ Aggiornamento completato!")
