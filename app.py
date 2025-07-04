@@ -62,12 +62,6 @@ if st.session_state.show_filters:
             st.success(f"✅ {risultati.shape[0]} risultati trovati")
             st.dataframe(risultati, use_container_width=True)
 
-# --- Aggiornamento dati ---
-if st.button("🔄 AGGIORNA",help="Non cliccare"):
-    with st.spinner("⏳ Aggiornamento in corso..."):
-        scrap_asl()
-    st.success("✅ Aggiornamento completato!")
-
 # --- Visualizza ultimo aggiornamento ---
 try:
     data = pl.read_csv(ultimo_agg_url)
